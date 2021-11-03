@@ -25,17 +25,17 @@ def signup():
 
         if len(email) < 4:
             flash("Email must be greater than 4 characters", category="Error")
+
         elif len(firstName) < 2:
             flash("First Name must be greater than 2 characters", category="Error")
+
         elif password1 != password2:
             flash("Password do not match each other", category="Error")
+
         elif len(password1) < 7:
             flash("Password must be greater than ", category="Error")
-            pass
+
         else:
-            # Add user to a datebase
-            pass
-
-
-
+            flash("Account Created!", category="sucess")
+            
     return render_template("sign-up.html")
